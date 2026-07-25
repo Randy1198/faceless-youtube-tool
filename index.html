@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faceless YouTube Tool - Free AI Video Script & Idea Generator</title>
+    <meta name="description" content="Free AI tools for faceless YouTube creators. Generate viral video ideas, scripts, pacing calculators, and tags instantly.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-indigo-400 tracking-tight flex items-center gap-2">
+                🎬 FacelessYouTubeTool<span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full font-mono">FREE</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-400">
+                <a href="#tools" class="hover:text-slate-200 transition">AI Generator</a>
+                <a href="#guides" class="hover:text-slate-200 transition">Growth Guides</a>
+                <a href="#checklist" class="hover:text-slate-200 transition">Monetization Checklist</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-5xl mx-auto px-4 pt-10 pb-16 flex-grow w-full">
+        
+        <!-- Hero Title -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-4 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Automate Your Faceless Channel
+            </h1>
+            <p class="text-slate-400 md:text-lg">
+                Generate high-retention video ideas and structured scripts optimized for viral YouTube Shorts & Long-form videos.
+            </p>
+        </div>
+
+        <!-- MAIN TOOL BOX -->
+        <section id="tools" class="bg-slate-800 border border-slate-700/60 rounded-2xl p-6 md:p-8 shadow-2xl shadow-indigo-950/20 max-w-3xl mx-auto">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-700/50">
+                <span class="text-2xl">🤖</span>
+                <div>
+                    <h2 class="text-xl font-bold text-white">AI Idea & Script Engine</h2>
+                    <p class="text-xs text-slate-400">Select your niche and format to build instant script assets</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">1. Select Niche</label>
+                    <select id="nicheSelect" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition cursor-pointer text-sm">
+                        <option value="finance">💰 Finance & Business (High CPM)</option>
+                        <option value="scifi">🛸 Sci-Fi & Space Mysteries</option>
+                        <option value="history">⏳ Ancient History Anomalies</option>
+                        <option value="scary">👻 Horror & Urban Legends</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">2. Target Format</label>
+                    <select id="lengthSelect" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition cursor-pointer text-sm">
+                        <option value="short">📱 YouTube Short (&lt; 60 Seconds)</option>
+                        <option value="long">📺 Long-Form Video Outline</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3.5 px-6 rounded-xl transition shadow-lg shadow-indigo-500/20 active:scale-[0.99] cursor-pointer flex justify-center items-center gap-2 text-sm md:text-base">
+                🚀 Generate Viral Asset Pack
+            </button>
+
+            <!-- Loading Spinner State -->
+            <div id="toolLoader" class="hidden mt-6 text-center py-8">
+                <div class="animate-spin inline-block w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mb-3" role="status"></div>
+                <p class="text-sm text-slate-400 font-mono animate-pulse">Structuring retention hooks & word pacing...</p>
+            </div>
+
+            <!-- Results Output -->
+            <div id="resultsContainer" class="hidden mt-8 space-y-6 border-t border-slate-700/60 pt-6">
+                <div>
+                    <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2">💡 Recommended Video Titles</h3>
+                    <div id="ideasOutput" class="space-y-2"></div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xs font-bold text-purple-400 uppercase tracking-widest">📝 High-Retention Script</h3>
+                        <button onclick="copyScript()" class="text-xs text-slate-300 hover:text-white bg-slate-700 hover:bg-slate-600 px-3 py-1.5 rounded-lg transition font-medium cursor-pointer flex items-center gap-1">
+                            📋 Copy Script
+                        </button>
+                    </div>
+                    <div id="scriptOutput" class="bg-slate-900 border border-slate-750 p-4 rounded-xl text-sm font-mono text-slate-300 leading-relaxed whitespace-pre-wrap max-h-72 overflow-y-auto"></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 bg-slate-900/60 p-4 rounded-xl border border-slate-700/30 text-center">
+                    <div>
+                        <div class="text-xs text-slate-400 mb-1">Est. Speaking Time</div>
+                        <div id="durationOutput" class="text-lg font-black text-emerald-400 font-mono">0s</div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 mb-1">Total Word Count</div>
+                        <div id="wordcountOutput" class="text-lg font-black text-blue-400 font-mono">0 words</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVERTISEMENT PLACEHOLDER CONTAINER -->
+        <div class="my-12 p-4 bg-slate-800/40 border border-dashed border-slate-700 rounded-xl text-center max-w-3xl mx-auto">
+            <span class="text-[10px] tracking-widest uppercase font-bold text-slate-500 block mb-1">Advertisement</span>
+            <div class="w-full min-h-[90px] bg-slate-900/50 rounded flex items-center justify-center text-xs text-slate-600 font-mono">
+                [AdSense Banner Slot]
+            </div>
+        </div>
+
+        <!-- SEO GUIDES SECTION -->
+        <section id="guides" class="mt-12 border-t border-slate-800 pt-12">
+            <h2 class="text-2xl md:text-3xl font-black text-white text-center mb-8 tracking-tight">
+                Faceless Channel Growth Blueprints
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="bg-slate-800/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition">
+                    <div class="text-indigo-400 text-2xl mb-3">🛠️</div>
+                    <h3 class="text-lg font-bold text-white mb-2">The $0 Automation Stack</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Build your videos without paying for monthly software. Combine free tier AI voice generators, Lexica.art graphics, and CapCut desktop editor for seamless automated rendering.
+                    </p>
+                </article>
+
+                <article class="bg-slate-800/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition">
+                    <div class="text-purple-400 text-2xl mb-3">⚡</div>
+                    <h3 class="text-lg font-bold text-white mb-2">The 3-Second Hook Rule</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Short-form algorithms drop videos with low retention in the first 3 seconds. Never start with "Welcome back." Start mid-action or with an unbelievable claim to lock viewers in.
+                    </p>
+                </article>
+
+                <article class="bg-slate-800/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition">
+                    <div class="text-pink-400 text-2xl mb-3">🛡️</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Reused Content Prevention</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Avoid YouTube monetization rejection by adding distinct visual edits, localized text overlays, color grading shifts, and original audio pacing to stock footage clips.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                © 2026 FacelessYouTubeTool.com — Free Creator Tools
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-slate-400 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition">Terms of Service</a>
+                <a href="#" class="hover:text-slate-400 transition">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Popup -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-indigo-600 text-white px-4 py-2.5 rounded-xl shadow-xl text-xs font-semibold tracking-wide hidden transition transform duration-200">
+        Copied to clipboard!
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
