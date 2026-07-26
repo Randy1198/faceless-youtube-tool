@@ -189,13 +189,12 @@ document.getElementById('generateBtn').addEventListener('click', function() {
     }, 800);
 });
 
-
-// Updated Copy to Clipboard Utility with Viral Attribution
+// Copy script to clipboard with clean toast feedback + viral watermark
 window.copyScript = function() {
     const rawText = document.getElementById('scriptOutput').innerText;
     
     // Automatically appends your domain at the bottom of copied text
-    const textWithWatermark = rawText + "\n\n---\nScript generated for free at FacelessYouTubeTool.com";
+    const textWithWatermark = rawText + "\n\n---\n⚡ Script generated for free at FacelessYouTubeTool.com";
 
     navigator.clipboard.writeText(textWithWatermark).then(() => {
         const toast = document.getElementById('toast');
