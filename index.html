@@ -1,73 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faceless YouTube Tool - Free AI Video Script & Idea Generator</title>
     <meta name="description" content="Free AI tools for faceless YouTube creators. Generate viral video ideas, scripts, pacing calculators, and tags instantly.">
-    <meta name="google-site-verification" content="8we96Y_YdjExK-bxOAfo-4CjXi0qfDzTEeVGgKUAq0w" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Adcash Library Script (Step 1) -->
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>  
-    
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
     <!-- Header Navigation -->
-    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-indigo-400 tracking-tight flex items-center gap-2">
-                🎬 FacelessYouTubeTool<span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full font-mono">FREE</span>
+                🎬 FacelessYouTubeTool <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full font-mono">FREE</span>
             </a>
             <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-400">
-                <a href="#tools" class="hover:text-slate-200 transition">AI Generator</a>
-                <a href="#guides" class="hover:text-slate-200 transition">Growth Guides</a>
-                <a href="#checklist" class="hover:text-slate-200 transition">Monetization Checklist</a>
+                <a href="#tools" class="hover:text-slate-200 transition">AI Script Engine</a>
+                <a href="#tag-creator" class="hover:text-slate-200 transition">Tag Creator</a>
+                <a href="#guides" class="hover:text-slate-200 transition">Creator Guides</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="max-w-5xl mx-auto px-4 pt-10 pb-16 flex-grow w-full">
-        
-        <!-- Hero Title -->
+    <!-- Main Interactive Tool Section -->
+    <main class="max-w-5xl mx-auto px-4 pt-12 pb-8">
         <div class="text-center max-w-2xl mx-auto mb-10">
             <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-4 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Automate Your Faceless Channel
+                Automate Your Faceless YouTube Channel
             </h1>
             <p class="text-slate-400 md:text-lg">
-                Generate high-retention video ideas and structured scripts optimized for viral YouTube Shorts & Long-form videos.
+                Generate high-retention video ideas, optimized scripts, and tags instantly without showing your face.
             </p>
         </div>
 
-        <!-- MAIN TOOL BOX -->
-        <section id="tools" class="bg-slate-800 border border-slate-700/60 rounded-2xl p-6 md:p-8 shadow-2xl shadow-indigo-950/20 max-w-3xl mx-auto">
+        <!-- MAIN INTERACTIVE TOOL BOX -->
+        <section id="tools" class="bg-slate-800 border border-slate-700/60 rounded-2xl p-6 md:p-8 shadow-2xl shadow-indigo-950/20 max-w-3xl mx-auto mb-8">
             <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-700/50">
                 <span class="text-2xl">🤖</span>
                 <div>
                     <h2 class="text-xl font-bold text-white">AI Idea & Script Engine</h2>
-                    <p class="text-xs text-slate-400">Select your niche and format to build instant script assets</p>
+                    <p class="text-xs text-slate-400">Select your niche and target video length below</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">1. Select Niche</label>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">1. Choose Content Niche</label>
                     <select id="nicheSelect" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition cursor-pointer text-sm">
                         <option value="finance">💰 Finance & Business (High CPM)</option>
-                        <option value="scifi">🛸 Sci-Fi & Space Mysteries</option>
-                        <option value="history">⏳ Ancient History Anomalies</option>
-                        <option value="scary">👻 Horror & Urban Legends</option>
+                        <option value="scifi">🛸 Sci-Fi & Mystery Stories</option>
+                        <option value="history">⏳ Alternative History</option>
+                        <option value="scary">👻 Horror & Creepypasta</option>
+                        <option value="trivia">🧠 Interactive Trivia & Quizzes</option>
+                        <option value="motivation">🔥 High-Energy Motivation</option>
+                        <option value="tech">💻 Future Tech & Gadget Reviews</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">2. Target Format</label>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">2. Target Format Length</label>
                     <select id="lengthSelect" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition cursor-pointer text-sm">
-                        <option value="short">📱 YouTube Short (&lt; 60 Seconds)</option>
-                        <option value="long">📺 Long-Form Video Outline</option>
+                        <option value="short">📱 YouTube Short (Under 60s)</option>
+                        <option value="long">📺 Full Video Script (Word Rich)</option>
                     </select>
                 </div>
             </div>
@@ -78,104 +73,358 @@
 
             <!-- Loading Spinner State -->
             <div id="toolLoader" class="hidden mt-6 text-center py-8">
-                <div class="animate-spin inline-block w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mb-3" role="status"></div>
-                <p class="text-sm text-slate-400 font-mono animate-pulse">Structuring retention hooks & word pacing...</p>
+                <div class="animate-spin inline-block w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mb-3"></div>
+                <p class="text-sm text-slate-400 font-mono animate-pulse">Assembling assets, structuring pacing hooks...</p>
             </div>
 
-            <!-- Results Output -->
+            <!-- Interactive Results Output Box -->
             <div id="resultsContainer" class="hidden mt-8 space-y-6 border-t border-slate-700/60 pt-6">
                 <div>
-                    <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2">💡 Recommended Video Titles</h3>
+                    <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2">💡 Recommended Video Ideas</h3>
                     <div id="ideasOutput" class="space-y-2"></div>
                 </div>
                 <div>
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xs font-bold text-purple-400 uppercase tracking-widest">📝 High-Retention Script</h3>
-                        <button onclick="copyScript()" class="text-xs text-slate-300 hover:text-white bg-slate-700 hover:bg-slate-600 px-3 py-1.5 rounded-lg transition font-medium cursor-pointer flex items-center gap-1">
-                            📋 Copy Script
-                        </button>
+                        <h3 class="text-xs font-bold text-purple-400 uppercase tracking-widest">📝 Structured High-Retention Script</h3>
+                        <button id="copyScriptBtn" onclick="copyScript()" class="text-xs text-slate-400 hover:text-white bg-slate-700 px-3 py-1 rounded-md transition font-medium cursor-pointer">📋 Copy Script</button>
                     </div>
-                    <div id="scriptOutput" class="bg-slate-900 border border-slate-750 p-4 rounded-xl text-sm font-mono text-slate-300 leading-relaxed whitespace-pre-wrap max-h-72 overflow-y-auto"></div>
+                    <div id="scriptOutput" class="bg-slate-900 border border-slate-700 p-4 rounded-xl text-sm font-mono text-slate-300 leading-relaxed whitespace-pre-wrap max-h-64 overflow-y-auto"></div>
                 </div>
                 <div class="grid grid-cols-2 gap-4 bg-slate-900/60 p-4 rounded-xl border border-slate-700/30 text-center">
                     <div>
-                        <div class="text-xs text-slate-400 mb-1">Est. Speaking Time</div>
+                        <div class="text-xs text-slate-400 mb-1">Est. Duration</div>
                         <div id="durationOutput" class="text-lg font-black text-emerald-400 font-mono">0s</div>
                     </div>
                     <div>
-                        <div class="text-xs text-slate-400 mb-1">Total Word Count</div>
+                        <div class="text-xs text-slate-400 mb-1">Word Count</div>
                         <div id="wordcountOutput" class="text-lg font-black text-blue-400 font-mono">0 words</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ADVERTISEMENT PLACEHOLDER CONTAINER -->
+        <!-- SECOND DASHBOARD TOOL: TAG CREATOR & KEYWORD EXTRACTOR -->
+        <section id="tag-creator" class="bg-slate-800 border border-slate-700/60 rounded-2xl p-6 md:p-8 shadow-2xl shadow-indigo-950/20 max-w-3xl mx-auto mb-12">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-700/50">
+                <span class="text-2xl">🏷️</span>
+                <div>
+                    <h2 class="text-xl font-bold text-white">SEO Tag Creator & Keyword Pack</h2>
+                    <p class="text-xs text-slate-400">Enter a video core topic to generate optimized metadata tags</p>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Your Video Core Topic or Title Idea</label>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="text" id="tagInput" placeholder="e.g., Space anomalies, passive income loops, ancient mysteries..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-purple-500 transition text-sm">
+                    <button id="tagBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-5 py-3 sm:py-0 rounded-xl transition text-sm cursor-pointer whitespace-nowrap">Create Tags</button>
+                </div>
+            </div>
+
+            <div id="tagResults" class="hidden mt-4 space-y-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xs font-bold text-purple-400 uppercase tracking-widest">Optimized Search Tags</h3>
+                    <button id="copyTagsBtn" onclick="copyTags()" class="text-xs text-slate-400 hover:text-white bg-slate-700 px-3 py-1 rounded-md transition font-medium cursor-pointer">📋 Copy Tag Block</button>
+                </div>
+                <div id="tagContainer" class="flex flex-wrap gap-2 p-3 bg-slate-900 border border-slate-700 rounded-xl max-h-32 overflow-y-auto"></div>
+                <div class="text-[10px] text-slate-500 font-mono text-right" id="tagCounter">Characters: 0 / 500 (YouTube Limit)</div>
+            </div>
+        </section>
+
+        <!-- HIGH-VISIBILITY AD PLACEHOLDER -->
         <div class="my-12 p-4 bg-slate-800/40 border border-dashed border-slate-700 rounded-xl text-center max-w-3xl mx-auto">
-            <span class="text-[10px] tracking-widest uppercase font-bold text-slate-500 block mb-2">Advertisement</span>
-            <div class="w-full min-h-[90px] flex items-center justify-center">
-                <!-- Adcash AutoTag Execution Script (Step 2) -->
-                <script type="text/javascript">
-                    aclib.runAutoTag({
-                        zoneId: 'x9da77vpnq',
-                    });
-                </script>
+            <span class="text-[10px] tracking-widest uppercase font-bold text-slate-500 block mb-1">Sponsored Advertisement Space</span>
+            <div class="w-full min-h-[90px] bg-slate-900/50 rounded flex items-center justify-center text-xs text-slate-600 font-mono">
+                [Ad Unit - Horizontal Banner Placement]
             </div>
         </div>
 
         <!-- SEO GUIDES SECTION -->
-        <section id="guides" class="mt-12 border-t border-slate-800 pt-12">
+        <section id="guides" class="mt-16 border-t border-slate-800 pt-12 max-w-3xl mx-auto">
             <h2 class="text-2xl md:text-3xl font-black text-white text-center mb-8 tracking-tight">
-                Faceless Channel Growth Blueprints
+                Mastering Faceless Channels: Creator Blueprints
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <article class="bg-slate-800/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition">
-                    <div class="text-indigo-400 text-2xl mb-3">🛠️</div>
-                    <h3 class="text-lg font-bold text-white mb-2">The $0 Automation Stack</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Build your videos without paying for monthly software. Combine free tier AI voice generators, Lexica.art graphics, and CapCut desktop editor for seamless automated rendering.
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/50 border border-slate-700/50 p-5 rounded-xl">
+                    <h3 class="text-lg font-bold text-indigo-400 mb-2">⚡ 1. Retention Pacing Rules</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Keep visual changes occurring every 2.5 to 4 seconds. Faceless audiences drop off rapidly when audio lacks visual movement or pattern interrupts.
                     </p>
-                </article>
-
-                <article class="bg-slate-800/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition">
-                    <div class="text-purple-400 text-2xl mb-3">⚡</div>
-                    <h3 class="text-lg font-bold text-white mb-2">The 3-Second Hook Rule</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Short-form algorithms drop videos with low retention in the first 3 seconds. Never start with "Welcome back." Start mid-action or with an unbelievable claim to lock viewers in.
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700/50 p-5 rounded-xl">
+                    <h3 class="text-lg font-bold text-purple-400 mb-2">🎯 2. The First 5 Seconds Hook</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Avoid intros or channel greetings. Open immediately with a high-stakes question or an unbelievable statement to lock in early view duration.
                     </p>
-                </article>
-
-                <article class="bg-slate-800/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition">
-                    <div class="text-pink-400 text-2xl mb-3">🛡️</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Reused Content Prevention</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Avoid YouTube monetization rejection by adding distinct visual edits, localized text overlays, color grading shifts, and original audio pacing to stock footage clips.
-                    </p>
-                </article>
+                </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-xs text-slate-500">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div>
-            © 2026 FacelessYouTubeTool.com — Free Creator Tools
-        </div>
-        <div class="flex space-x-6">
-            <a href="privacy.html" class="hover:text-slate-400 transition">Privacy Policy</a>
-            <a href="terms.html" class="hover:text-slate-400 transition">Terms of Service</a>
-        </div>
-    </div>
-</footer>
+    <footer class="border-t border-slate-800 mt-20 py-8 text-center text-xs text-slate-500">
+        <p>© 2026 FacelessYouTubeTool. All rights reserved. Free creator utilities.</p>
+    </footer>
 
-    <!-- Toast Notification Popup -->
-    <div id="toast" class="fixed bottom-5 right-5 bg-indigo-600 text-white px-4 py-2.5 rounded-xl shadow-xl text-xs font-semibold tracking-wide hidden transition transform duration-200">
-        Copied to clipboard!
-    </div>
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // -------------------------------------------------------------------------
+        // DATABASE ASSETS
+        // -------------------------------------------------------------------------
+        const automatedDatabase = {
+            finance: {
+                short: {
+                    ideas: [
+                        "💰 The 3 Bank Accounts You Need to Wealth Build",
+                        "📈 How Small Daily Investments Loop Into Big Assets",
+                        "🚨 The Sneaky Expense Trap Ruining Middle Class Savings"
+                    ],
+                    script: "[HOOK - 0:00 to 0:05]\nIf you keep all your money sitting in a standard savings account, you are losing purchasing power every single day.\n\n[BODY - 0:05 to 0:45]\nStandard bank accounts offer tiny interest rates while inflation erodes your cash. High-yield savings accounts and simple index funds let your money compound automatically in the background. Move your emergency fund to high-yield interest options today.\n\n[CALL TO ACTION - 0:45 to 0:60]\nSubscribe for daily financial tips and drop your questions below!"
+                },
+                long: {
+                    ideas: [
+                        "🏦 The Automated Wealth Architecture: Set & Forget Finances",
+                        "📊 Stock Market Basics: Building a Passive Index Portfolio",
+                        "💳 The Credit Score Blueprint: Fixing Your Credit Fast"
+                    ],
+                    script: "[SECTION 1 - FINANCIAL HOOK]\nBuilding financial independence doesn't require a high salary; it requires a reliable financial system. Today, we break down the automated wealth framework.\n\n[SECTION 2 - AUTOMATION STEPS]\nFirst: Direct deposit split routing. Automatically route 15% of your income into an investment account before it touches your spending checking account. Second: Maintain a liquid 3-month emergency reserve in a high-yield account."
+                }
+            },
+            scifi: {
+                short: {
+                    ideas: [
+                        "🛸 The Signal Discovered Deep Inside Jupiter's Red Spot",
+                        "🌌 Why Scientists Are Watching This Distant Exoplanet",
+                        "🛰️ The Mysterious Space Probe That Woke Up After 40 Years"
+                    ],
+                    script: "[HOOK - 0:00 to 0:05]\nDeep space monitors just recorded a repeating geometric signal originating from inside Jupiter's atmosphere.\n\n[BODY - 0:05 to 0:45]\nThe transmission repeats every 14 hours with exact mathematical precision. Radio telescopes across three continents confirmed the anomaly is not natural cosmic noise. Researchers are racing to decode the sequence.\n\n[CALL TO ACTION - 0:45 to 0:60]\nWhat do you think is sending the signal? Drop your theories below!"
+                },
+                long: {
+                    ideas: [
+                        "🪐 The Great Filter Paradox: Are We Alone in the Galaxy?",
+                        "🚀 Deep Space Propulsion Methods That Will Change Interstellar Travel",
+                        "👾 Alien Megastructures: Decoding Hypothesized Space Artifacts"
+                    ],
+                    script: "[SECTION 1 - SCI-FI HOOK]\nThe Fermi Paradox asks a simple question: If intelligent life is probable, where is everybody? The answer may involve cosmic barriers known as The Great Filter.\n\n[SECTION 2 - THE DEEP ANALYSIS]\nIf the filter lies behind us, human civilization has survived a rare evolutionary bottleneck. If the filter lies ahead of us, our greatest planetary technological tests are still to come."
+                }
+            },
+            history: {
+                short: {
+                    ideas: [
+                        "🗺️ The Ancient Bronze Map That Rewrites Ancient Geography",
+                        "👑 The Lost Empire Discovered Beneath Dense Jungle Canopy",
+                        "🏺 Ancient Artifacts That Outperform Modern Engineering"
+                    ],
+                    script: "[HOOK - 0:00 to 0:05]\nArcheologists unburied a bronze vault containing a map that completely challenges conventional human history timeline models.\n\n[BODY - 0:05 to 0:45]\nThe map accurately charts coastlines of Antarctica matching satellite scans of bedrock beneath the ice. This suggests advanced geographic mapping tools existed long before modern industrial machinery.\n\n[CALL TO ACTION - 0:45 to 0:60]\nTell us your historical theories in the comments and subscribe for part two."
+                },
+                long: {
+                    ideas: [
+                        "🏛️ Lost World Timelines: The Ancient Global Geography Paradox",
+                        "👑 The Shadow Dynasties: Hidden Powers of Medieval History",
+                        "🌊 Submerged Megaliths: Ruins Found Below Atlantic Coastal Vaults"
+                    ],
+                    script: "[SECTION 1 - HISTORICAL HOOK]\nOur understanding of human history rests on surviving fragments. But what happens when discovered artifacts contradict established timelines?\n\n[SECTION 2 - ANOMALIES]\nConsider identical engineering metrics found in megalithic foundations worldwide across continents that supposedly had zero contact. Precision cuts and astronomical alignments point to shared structural knowledge."
+                }
+            },
+            scary: {
+                short: {
+                    ideas: [
+                        "👁️ Never Look Under Your Bed If You Hear This Specific Sound",
+                        "📻 The Mysterious Rules to Surviving The Midnight Radio Station",
+                        "🌲 Why Deep Forest Search Crews Avoid Certain Sectors"
+                    ],
+                    script: "[HOOK - 0:00 to 0:05]\nIf you wake up at 3:14 AM to a clicking sound in your room, stay completely still.\n\n[BODY - 0:05 to 0:45]\nThe clicking is a lure designed to verify if you are awake. If you stay still and keep your eyes closed, it will move past. But if your breathing changes, the room will turn ice cold.\n\n[CALL TO ACTION - 0:45 to 0:60]\nHave you ever heard strange sounds at night? Share your creepiest stories below!"
+                },
+                long: {
+                    ideas: [
+                        "🌲 Deep Woods Protocols: Safety Guidelines Rangers Never Print",
+                        "🏚️ Abandoned Research Stations: The Isolation Experiment",
+                        "📱 The Restricted Forum Threads Hidden in Plain Sight"
+                    ],
+                    script: "[SECTION 1 - HORROR INTRO]\nThere are guidelines for navigating isolated national parks, but the most important rules are never printed on brochures. Search teams know the exact signs that mean an area must be evacuated immediately.\n\n[SECTION 2 - THE PROTOCOL]\nIt begins with absolute silence in the woods when all insects and birds stop vocalizing at once. If this occurs, do not run. Running triggers a response. Stand still and wait."
+                }
+            },
+            trivia: {
+                short: {
+                    ideas: [
+                        "🧠 Only 1% of People Get 3/3 on This Survival Trivia Quiz",
+                        "🚩 Quick IQ Challenge: Can You Solve These 3 Questions?",
+                        "🌍 Mind-Blowing Science Facts You Didn't Learn in School"
+                    ],
+                    script: "[HOOK - 0:00 to 0:05]\nHere is a quick trivia challenge that 99% of people fail on the final question!\n\n[BODY - 0:05 to 0:45]\nQuestion 1: What human organ can regenerate its missing segments? The Liver.\nQuestion 2: In an electrical storm, is it safer in a wooden shed or a metal car? Your car, due to charge distribution.\nQuestion 3: What animal causes the most human fatalities annually? Mosquitoes.\n\n[CALL TO ACTION - 0:45 to 0:60]\nDid you get all 3 right? Tell us your score below and subscribe!"
+                },
+                long: {
+                    ideas: [
+                        "🏛️ The Ultimate Historical Quiz: Separating Myths From Real Data",
+                        "🛰️ Deep Space Quizzes That Challenge Astronomy Enthusiasts",
+                        "🗺️ Border & Capital Trivia Traps Most Geographers Miss"
+                    ],
+                    script: "[SECTION 1 - TRIVIA HOOK]\nInteractive trivia channels hold some of the highest retention rates because viewers love testing their knowledge. Today we test your general science IQ.\n\n[SECTION 2 - QUESTION MATRIX]\nQuestion 1 targets intuitive traps where standard guesses fail. Question 2 tests secondary deductive logic. Question 3 introduces an astounding real-world fact."
+                }
+            },
+            motivation: {
+                short: {
+                    ideas: [
+                        "⚡ Read This Blueprint If You Feel Lost or Unmotivated Today",
+                        "🦁 The Mindset Shift to Out-Work Your Competition Safely",
+                        "⏳ Stop Waiting for the Right Time: Start Executing Now"
+                    ],
+                    script: "[HOOK - 0:00 to 0:05]\nNobody is coming to save you. Your success depends entirely on what you do today.\n\n[BODY - 0:05 to 0:45]\nMotivation is temporary; discipline is permanent. If you only put in work on days you feel like it, you will get passed by operators who build daily habits regardless of mood. Stop overthinking and start taking small daily actions.\n\n[CALL TO ACTION - 0:45 to 0:60]\nType 'READY' in the comments below if you are locking in today!"
+                },
+                long: {
+                    ideas: [
+                        "🥋 The Discipline Codex: Building Unshakable Daily Habits",
+                        "🧠 Re-Programming Cognitive Focus in a World of Distractions",
+                        "🦅 Silent Execution: How to Build Success Without Seeking Approval"
+                    ],
+                    script: "[SECTION 1 - MOTIVATION HOOK]\nTrue focus has become a rare competitive advantage. Today we break down how to replace temporary hype with structured daily routines.\n\n[SECTION 2 - EXECUTION STEPS]\nFirst: Remove emotional choices from your morning routine. Second: Treat difficulty as a sign of progress. Third: Keep your goals private while executing consistently."
+                }
+            },
+            tech: {
+                short: {
+                    ideas: [
+                        "📱 The New Display Tech That Could Replace Smartphones",
+                        "🚨 3 New AI Tools That Will Change How You Work",
+                        "🕶️ Invisible Wearable Gear: The Future of Mobile Computing"
+                    ],
+                    script: "[HOOK - 0:00 to 0:05]\nThis transparent glass array could render smartphones obsolete in the coming years.\n\n[BODY - 0:05 to 0:45]\nIt projects context-aware interactive displays into mid-air without requiring heavy handheld plastic hardware. Using gesture sensors, users navigate tasks, map directions, and manage messaging seamlessly.\n\n[CALL TO ACTION - 0:45 to 0:60]\nWould you wear invisible tech or keep your regular phone? Comment below!"
+                },
+                long: {
+                    ideas: [
+                        "🦾 Deep Dive: The Silicon Horizon of Next-Generation Automated Gear",
+                        "🔋 Battery Breakthroughs: Decoupling Electronics From Wall Chargers",
+                        "🌐 After the Smartphone: Mapping the Next Decade of Wearables"
+                    ],
+                    script: "[SECTION 1 - TECH HOOK]\nTechnology content captures high advertiser interest due to strong consumer purchasing intent. Today we analyze emerging computing interface trends.\n\n[SECTION 2 - INTERFACE UPGRADES]\nWe are shifting away from separate application software ecosystems toward unified interface layouts where localized models execute actions natively via voice and gesture tracking."
+                }
+            }
+        };
 
-    <script src="app.js"></script>
+        // -------------------------------------------------------------------------
+        // CORE ENGINE LOGIC (Script & Idea Generator)
+        // -------------------------------------------------------------------------
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const btn = this;
+            const loader = document.getElementById('toolLoader');
+            const results = document.getElementById('resultsContainer');
+            
+            btn.disabled = true;
+            results.classList.add('hidden');
+            loader.classList.remove('hidden');
+
+            setTimeout(() => {
+                const niche = document.getElementById('nicheSelect').value;
+                const length = document.getElementById('lengthSelect').value;
+                const data = automatedDatabase[niche][length];
+
+                const ideasOutput = document.getElementById('ideasOutput');
+                ideasOutput.innerHTML = '';
+                
+                data.ideas.forEach(idea => {
+                    const item = document.createElement('div');
+                    item.className = "bg-slate-900 border border-slate-700/60 p-3 rounded-lg text-sm text-slate-200 font-medium hover:border-indigo-500/50 transition";
+                    item.innerText = idea;
+                    ideasOutput.appendChild(item);
+                });
+
+                const scriptBox = document.getElementById('scriptOutput');
+                scriptBox.innerText = data.script;
+
+                const wordCount = data.script.split(/\s+/).filter(w => w.length > 0).length;
+                document.getElementById('wordcountOutput').innerText = wordCount + " words";
+
+                const totalSeconds = Math.round((wordCount / 150) * 60);
+                document.getElementById('durationOutput').innerText = totalSeconds + "s";
+
+                loader.classList.add('hidden');
+                results.classList.remove('hidden');
+                btn.disabled = false;
+                
+                results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 800);
+        });
+
+        window.copyScript = function() {
+            const text = document.getElementById('scriptOutput').innerText;
+            const btn = document.getElementById('copyScriptBtn');
+            navigator.clipboard.writeText(text).then(() => {
+                const orig = btn.innerText;
+                btn.innerText = "Copied! ✓";
+                btn.classList.add("bg-emerald-600");
+                setTimeout(() => {
+                    btn.innerText = orig;
+                    btn.classList.remove("bg-emerald-600");
+                }, 2000);
+            });
+        };
+
+        // -------------------------------------------------------------------------
+        // SEO TAG CREATOR LOGIC
+        // -------------------------------------------------------------------------
+        document.getElementById('tagBtn').addEventListener('click', function() {
+            const rawInput = document.getElementById('tagInput').value.trim();
+            if(!rawInput) {
+                alert("Please enter a core topic keyword first!");
+                return;
+            }
+
+            const universalModifiers = ["faceless youtube", "automation", "shorts", "viral video", "tutorial", "algorithm", "growth strategies", "content creator tips"];
+            const inputWords = rawInput.toLowerCase().split(/\s+/).filter(w => w.length > 2).map(w => w.replace(/[^a-zA-Z0-9]/g, ''));
+            
+            let baseTagsSet = new Set();
+            baseTagsSet.add(rawInput.toLowerCase());
+
+            inputWords.forEach(word => {
+                baseTagsSet.add(`${word} tips`);
+                baseTagsSet.add(`${word} automation`);
+                baseTagsSet.add(`faceless ${word}`);
+                baseTagsSet.add(`${word} channel`);
+            });
+
+            universalModifiers.forEach(mod => baseTagsSet.add(mod));
+
+            const finalTagsArray = Array.from(baseTagsSet);
+            const tagContainer = document.getElementById('tagContainer');
+            tagContainer.innerHTML = '';
+
+            let currentCharacterCount = 0;
+            let finalStringBuilder = [];
+
+            for(let i = 0; i < finalTagsArray.length; i++) {
+                let cleanTag = finalTagsArray[i];
+                let prospectiveLength = cleanTag.length + (finalStringBuilder.length > 0 ? 2 : 0);
+
+                if((currentCharacterCount + prospectiveLength) > 490) {
+                    break; // Cap before 500 characters
+                }
+
+                finalStringBuilder.push(cleanTag);
+                currentCharacterCount += prospectiveLength;
+
+                const chip = document.createElement('span');
+                chip.className = "inline-flex items-center text-xs bg-purple-500/10 text-purple-300 px-2.5 py-1 rounded-md border border-purple-500/20 font-mono";
+                chip.innerText = cleanTag;
+                tagContainer.appendChild(chip);
+            }
+
+            window.lastGeneratedTagsBlock = finalStringBuilder.join(", ");
+            document.getElementById('tagCounter').innerText = `Characters: ${currentCharacterCount} / 500 (YouTube Limit)`;
+            document.getElementById('tagResults').classList.remove('hidden');
+        });
+
+        window.copyTags = function() {
+            if(window.lastGeneratedTagsBlock) {
+                const btn = document.getElementById('copyTagsBtn');
+                navigator.clipboard.writeText(window.lastGeneratedTagsBlock).then(() => {
+                    const orig = btn.innerText;
+                    btn.innerText = "Copied! ✓";
+                    btn.classList.add("bg-emerald-600");
+                    setTimeout(() => {
+                        btn.innerText = orig;
+                        btn.classList.remove("bg-emerald-600");
+                    }, 2000);
+                });
+            }
+        };
+    </script>
 </body>
 </html>
